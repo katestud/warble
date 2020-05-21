@@ -23,9 +23,11 @@ defmodule WarbleWeb.PostLive.PostComponent do
         </div>
         <div class="column">
           <%= live_patch to: Routes.post_index_path(@socket, :edit, @post.id) do %>
+            Edit
             <i class="far fa-edit"></i>
           <% end %>
           <%= link to: "#", phx_click: "delete", phx_value_id: @post.id, data: [confirm: "Are you sure?"] do %>
+            Delete
             <i class="far fa-trash-alt"></i>
           <% end %>
         </div>
